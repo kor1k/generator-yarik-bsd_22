@@ -5,22 +5,31 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Generator Yaroslav</title>
-    <link rel="stylesheet" href="src/css/reset.css">
+    <title>Generator v.1</title>
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-<div class="container">
-    <p class="main-title">Generator of random numbers with low and high limits</p>
-
-    <label class="input-title">Low limit</label>
-    <input type="text">
-    <label class="input-title">High limit</label>
-    <input type="text">
-    <label class="input-title">Quantity</label>
-    <input type="text">
-    <p class="input-title">Submit</p>
+<div id="svg-gen">
+    <div class="container">
+        <h1 class="main-title">Числа не должны быть больше чем: <span>2147483647</span></h1>
+        <div class="inputs-wrapper">
+            <label class="inputs-title">Lower Limit</label>
+            <input required class="lower-limit" id="lower" type="text">
+            <label class="inputs-title">Upper Limit</label>
+            <input required class="upper-limit" id="upper" type="text">
+            <label class="inputs-title">Quantity</label>
+            <input required class="quantity" id="quantity" type="text">
+            <input class="button" type="button" id="submit" placeholder="generate" value="Generate">
+            <button class="clean-numbers" id="clean-numbers-in-html" onclick="clearNumbers()">Clean All</button>
+            <div class="testType" id="typeInHtml"></div>
+        </div>
+    </div>
+    <!--<div class="test">tip</div>-->
 </div>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 <script src="src/js/script.js"></script>
 </body>
 </html>
